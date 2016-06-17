@@ -173,13 +173,6 @@
                                     <action selector="clickClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lay-cD-OdG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzT-dl-za9">
-                                <rect key="frame" x="20" y="28" width="280" height="57"/>
-                                <color key="backgroundColor" red="1" green="0.067852817237323282" blue="0.19316768817926844" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRr-nU-rWb">
                                 <rect key="frame" x="278" y="538" width="22" height="22"/>
                                 <state key="normal">
@@ -198,6 +191,13 @@
                                     <action selector="openNewView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15N-L3-Vc4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzT-dl-za9">
+                                <rect key="frame" x="20" y="28" width="280" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97246612990000003" blue="0.14579901270000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwI-0E-TbW">
-                                <rect key="frame" x="145" y="311" width="39" height="30"/>
+                                <rect key="frame" x="141" y="389" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" red="0.94836524960000002" green="1" blue="0.93668037989999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -249,10 +249,22 @@
                                     <action selector="close:" destination="Rsy-Df-kiP" eventType="touchUpInside" id="kuH-1T-Xmh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-Vs-lZU">
+                                <rect key="frame" x="75" y="296" width="178" height="30"/>
+                                <state key="normal" title="Change Color">
+                                    <color key="titleColor" red="0.94895982991113903" green="1" blue="0.91600728842107637" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="Rsy-Df-kiP" eventType="touchUpInside" id="57Y-kI-OQC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4015974336" green="0.66666666669999997" blue="0.02299035327" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myLabel" destination="M1R-Fh-Xka" id="K1E-Xb-jng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lg-uk-HuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,24 +282,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F81-WM-yKz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F81-WM-yKz">
                                 <rect key="frame" x="126" y="100" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.95030167809999999" green="0.97249481969999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-pI-6jo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-pI-6jo">
                                 <rect key="frame" x="141" y="201" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" red="0.95030167809999999" green="0.97249481969999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vYz-2m-JbH" kind="unwind" unwindAction="unwindToViewController:" id="XJV-5n-g4z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.76446517721288632" green="0.17671769939387783" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F81-WM-yKz" firstAttribute="centerX" secondItem="7Cl-pI-6jo" secondAttribute="centerX" id="3NL-yP-TrR"/>
+                            <constraint firstItem="F81-WM-yKz" firstAttribute="top" secondItem="dDB-Ld-5tj" secondAttribute="bottom" constant="80" id="Ds0-gH-HVh"/>
+                            <constraint firstItem="7Cl-pI-6jo" firstAttribute="top" secondItem="F81-WM-yKz" secondAttribute="bottom" constant="80" id="aEH-tP-I52"/>
+                            <constraint firstItem="F81-WM-yKz" firstAttribute="centerX" secondItem="Lfv-i4-JeY" secondAttribute="centerX" id="jAf-2T-gJn"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecX-Nu-wsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vYz-2m-JbH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="681" y="871"/>
         </scene>

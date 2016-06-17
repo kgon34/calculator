@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSLog(@"Text = %@", self.myString);
+    
+    self.myLabel.text = self.myString;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,4 +43,9 @@
 }
 
 
+- (IBAction)changeColor:(UIColor *)newColor {
+    if ([self.delegate respondsToSelector:@selector(changeColor:)]) {
+        [self.delegate changeColor:[UIColor redColor]];
+    }
+}
 @end

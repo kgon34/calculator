@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InfoViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <InfoViewProtocol>
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
 
@@ -46,6 +47,9 @@
 
 - (IBAction)openNewView:(id)sender;
 
+- (IBAction)unwindToViewController:(UIStoryboardSegue *)sender; //직접 만듬....
+
+- (IBAction)changeColor:(UIColor *)newColor;
 
 @end
 

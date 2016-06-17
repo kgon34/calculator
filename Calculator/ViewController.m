@@ -215,7 +215,11 @@
 //    infoview
     InfoViewController *infoViewcontroller = [self.storyboard instantiateViewControllerWithIdentifier:@"infoview"];
     
+    infoViewcontroller.delegate = self;
+    
     infoViewcontroller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    infoViewcontroller.myString = self.display.text;
     
     [self presentViewController : infoViewcontroller animated:YES completion:nil];
     
@@ -224,4 +228,28 @@
 - (IBAction)openNewView:(id)sender {
     [self performSegueWithIdentifier:@"blueview" sender:self];
 }
+
+- (IBAction)unwindToViewController:(UIStoryboardSegue *)sender {
+    NSLog(@"unwindToViewController");
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    NSLog(@"Seque ID = %@", segue.identifier);
+    
+    if ([segue.identifier isEqualToString:@"blueview"]){
+        InfoViewController *infoView = [segue destinationViewController];
+        infoView.myString = @"Hello World";
+    }
+    
+}
+
+- (IBAction)changeColor:(UIColor *)newColor {
+    NSLog(@"Change Color");
+    
+    [self.view setBackgroundColor:newColor];
+}
+
 @end
