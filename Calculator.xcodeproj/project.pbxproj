@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0B61791D13B26300B4A647 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0B61781D13B26300B4A647 /* ThirdViewController.m */; };
 		CC1D09901D1140CC004C04FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D098F1D1140CC004C04FC /* main.m */; };
 		CC1D09931D1140CC004C04FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D09921D1140CC004C04FC /* AppDelegate.m */; };
 		CC1D09961D1140CC004C04FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D09951D1140CC004C04FC /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0B61771D13B26300B4A647 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		CC0B61781D13B26300B4A647 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		CC1D098B1D1140CC004C04FC /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1D098F1D1140CC004C04FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC1D09911D1140CC004C04FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				CC1D098E1D1140CC004C04FC /* Supporting Files */,
 				CC4EC3081D12861200CC3139 /* InfoViewController.h */,
 				CC4EC3091D12861200CC3139 /* InfoViewController.m */,
+				CC0B61771D13B26300B4A647 /* ThirdViewController.h */,
+				CC0B61781D13B26300B4A647 /* ThirdViewController.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				CC1D09931D1140CC004C04FC /* AppDelegate.m in Sources */,
 				CC1D09901D1140CC004C04FC /* main.m in Sources */,
 				CC4EC3071D1239E200CC3139 /* Fraction.m in Sources */,
+				CC0B61791D13B26300B4A647 /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

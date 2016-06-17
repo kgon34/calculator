@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Calculator.h"
 #import "InfoViewController.h"
+#import "ThirdViewController.h"
 
 @interface ViewController ()
 
@@ -226,7 +227,7 @@
 }
 
 - (IBAction)openNewView:(id)sender {
-    [self performSegueWithIdentifier:@"blueview" sender:self];
+    [self performSegueWithIdentifier:@"puppleview" sender:self];
 }
 
 - (IBAction)unwindToViewController:(UIStoryboardSegue *)sender {
@@ -242,6 +243,12 @@
     if ([segue.identifier isEqualToString:@"blueview"]){
         InfoViewController *infoView = [segue destinationViewController];
         infoView.myString = @"Hello World";
+    } else if ([segue.identifier isEqualToString:@"puppleview"])
+    {
+        ThirdViewController *thirdView = [segue destinationViewController];
+        [thirdView changeColorFunc:^(UIColor *newColor) {
+            [self.view setBackgroundColor:newColor];
+        }];
     }
     
 }

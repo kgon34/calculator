@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="681" y="233"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="mIk-q5-Pbs">
             <objects>
-                <viewController id="bJs-9k-cMh" sceneMemberID="viewController">
+                <viewController id="bJs-9k-cMh" customClass="ThirdViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dDB-Ld-5tj"/>
                         <viewControllerLayoutGuide type="bottom" id="fm2-cX-FCp"/>
@@ -295,6 +295,13 @@
                                 </state>
                                 <connections>
                                     <segue destination="vYz-2m-JbH" kind="unwind" unwindAction="unwindToViewController:" id="XJV-5n-g4z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9g-SL-cn8">
+                                <rect key="frame" x="114" y="269" width="92" height="30"/>
+                                <state key="normal" title="Change color"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="bJs-9k-cMh" eventType="touchUpInside" id="iBR-cg-wqQ"/>
                                 </connections>
                             </button>
                         </subviews>
